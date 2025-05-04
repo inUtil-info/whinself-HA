@@ -1,0 +1,40 @@
+name: Whinself
+version: "250501"
+slug: whinself
+description: Self-hosted WhatsApp API
+startup: services
+boot: auto
+arch:
+  - amd64
+  - armv7
+  - aarch64
+ports:
+  8888/tcp: 8888
+panel_icon: mdi:whatsapp
+panel_title: Whinself
+map:
+  - ssl:ro
+  - media:ro
+  - addons:ro
+  - backup:ro
+  - share:ro
+options:
+  slotid: slot1
+  nrurl: ""
+  portin: 8888
+  devicename: Whinself Bot
+  debuglevel: 0
+  logstdout: true
+  logsse: true
+  qrurl: ""
+host_network: true
+webui: http://[HOST]:[PORT:8888]
+schema:
+  slotid: "str?"
+  nrurl: "str?"
+  portin: "int"
+  devicename: "str?"
+  debuglevel: "int?"
+  logstdout: "bool?"
+  logsse: "bool?"
+  qrurl: "str?"
